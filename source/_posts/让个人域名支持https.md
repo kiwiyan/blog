@@ -20,6 +20,10 @@ comments: true
 ![](/images/2018/3/https2.png)
 ![](/images/2018/3/https3.png)
 
+## 修改DNS服务器
+配置Nameserver完成后，系统会为你分配两个DNS服务器地址，这时需要将你域名DNS解析地址修改为cloudflare分配的这两个地址。以我的阿里云域名为例，在阿里云控制台域名项，将默认的阿里云DNS地址修改为cloudflare的DNS地址。
+![](/images/2018/3/https3.5.png)
+
 ## 设置SSL为Flexible。
 在Crypto项中设置解析为Flexible
 ![](/images/2018/3/https4.png)

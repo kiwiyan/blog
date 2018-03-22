@@ -73,7 +73,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: next
+theme: huxblog
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -87,3 +87,80 @@ search:
   field: post
   format: html
   limit: 10000
+
+
+#huxblog-Custom Setting Start
+
+# Site settings
+SEOTitle: kiwiyan的博客 | Kiwi Yan's Blog
+header-img: images/huxblog/home-bg-o.jpg
+email: yanboyiha@163.com
+keyword: ""
+
+
+# SNS settings
+# RSS: false
+weibo_username:     Demonbane
+zhihu_username:     Demonbane
+github_username:    Kaijun
+twitter_username:   Demonbane_x
+facebook_username:  demonbane.cn
+linkedin_username:  kaijun-chen-42089354
+
+# Build settings
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+# Disqus settings
+disqus_username: hexo-theme-huxblog
+
+# Duoshuo settings
+# duoshuo_username: kaijun
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "我要成为魔法师!"
+sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+# Friends
+friends: [
+    {
+        title: "Kaijun's Blog",
+        href: "http://blog.kaijun.rocks"
+    },{
+        title: "Hux Blog",
+        href: "http://huangxuan.me"
+    },{
+        title: "Foo",
+        href: "#"
+    },{
+        title: "Bar",
+        href: "#"
+    },{
+        title: "Example Friends",
+        href: "#"
+    },{
+        title: "It helps SEO",
+        href: "#"
+    }
+]
+
+
+#Custom Setting End

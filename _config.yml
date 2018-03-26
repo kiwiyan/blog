@@ -93,7 +93,7 @@ search:
 
 # Site settings
 SEOTitle: kiwiyan的博客 | Kiwi Yan's Blog
-header-img: images/huxblog/home-bg-o.jpg
+header-img: images/huxblog/home-bg-o2.jpg
 email: yanboyiha@163.com
 keyword: ""
 
@@ -112,7 +112,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Disqus settings
-disqus_username: hexo-theme-huxblog
+disqus_username: kiwiyan
 
 # Duoshuo settings
 # duoshuo_username: kaijun

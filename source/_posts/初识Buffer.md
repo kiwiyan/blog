@@ -5,14 +5,12 @@ tags: node核心模块
 categories: nodejs
 comments: true
 ---
-
-
-## Buffer对象
-
 ### 什么是Buffer？
-Buffer 是 Node.js 中用于处理二进制数据的类, 其中与 IO 相关的操作 (网络请请求/文件读写等) 均基于 Buffer. Buffer 类的实例非常类似整数数组, 但其大小是固定不变的, 并且其内存在 V8 堆栈外分配原始内存空间。 Buffer 类的实例创建之后, 其所占用的内存大小就不能再进行调整。
+Buffer 是 Node.js 中用于处理二进制数据的类, 其中与 IO 相关的操作 (网络请请求/文件读写等) 均基于 Buffer。
+Buffer 类的实例非常类似整数数组, 但其大小是固定不变的, 并且其内存在 V8 堆栈外分配原始内存空间。 Buffer 类的实例创建之后, 其所占用的内存大小就不能再进行调整。
+<!-- more -->
 
-## Buffer对象的创建
+### Buffer对象的创建
 Buffer对象类似于数组，每个元素由两个16进制的整数组成。
 Node 6.x之后，new Buffer()的方式被弃用。创建Buffer对象常用的方法有：
 
@@ -20,6 +18,7 @@ api | 解释
 ---|---
 Buffer.from() | 根据已有数据生成一个 Buffer 对象
 Buffer.alloc() | 创建一个初始化后的 Buffer 对象
+Buffer.allocUnsafe() | 创建一个未初始化的 Buffer 对象
 
 
 ```js
@@ -37,8 +36,8 @@ let buffer3 = Buffer.allocUnsafe(10);
 console.log(buffer3); //<Buffer 00 00 00 00 00 00 00 00 00 00>
 ```
 
-## Buffer的转换
-### Buffer转成字符串 
+### Buffer的转换
+#### Buffer转成字符串 
 ```js
 // 读取文件数据
 fs.readFile('./test.txt', (err, bufferData) => {

@@ -19,6 +19,7 @@ sercive docker start
 ## 安装镜像
 ```
 docker run -i -t ubuntu /bin/bash
+docker  run -it  -p  30080:80  -p 30020-30023:20-23   --name 30.kiwilab.jd.com   fe:1.0  /bin/bash 
 ```
 ## 删除镜像
 docker rmi
@@ -34,15 +35,103 @@ exit 从容器退出到宿主机 此时容器停止运行;重启容器： docker
 ## 容器篇
 
 ### 创建容器
-docker run --name test -idt -p 8080:8888 node /bin/bash
+创建容器服务器篇
+
+#### 1. 创建容器
+docker  run -it  -p  30080:80  -p 30020-30023:20-23   --name 30.kiwilab.jd.com   fe:1.0  /bin/bash 
+
+#### 2. 添加宿主机的nginx配置文件
+nginx conf.d 下创建 kiwilab.jd.com的文件（名称自定义）,添加配置内容 
+
+server {
+    listen       80; #监听你自己服务器的80端口
+    server_name  kiwilab.jd.com; #你的域名
+    location / {
+        proxy_pass       http://127.0.0.1:30080; #你的容器对外端口
+        proxy_redirect   off;
+        proxy_set_header Host    $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+    }
+}
+
+#### 3 重启nginx  
+whereis nginx  获取nginx安装路径
+nginx 的sbin路径下 ./nginx -s reload 重启nginx，这样nginx的配置修改就有效了
+
+#### 4. 进入你的容器，创建你的server
+启动一个服务（启动服务的方式很多，比如容器内的nginx，或者http-server，或者手写一个如下）
+var http = require('http');
+
+http.createServer(function(req,res){
+res.end('ok');
+
+}).listen(80); // 
+
+#### 5. 开启防火墙
+可能需要开启防火墙才能“直接”访问（防火墙可能默认关闭直接访问ip端口路径） http://192.168.182.85:30080/ 返回容器里的服务响应
+vi /etc/sysconfig/iptables  添加内容：
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 30080 -j ACCEPT   #添加30080端口的防火墙开关
+service iptables restart   修改后重启防火墙
+
+#### 6. 访问http://192.168.182.85:30080/
+页面响应内容-ok
+或者配置host 
 
 ### 删除容器
 （如果容器正在运行需要先关掉容器 docker stop/kill container_name）
 docker rm container_id/container_name
 
+### 查看容器
+docker ps -a  展示容器列表
+docker attach container_name   进入容器
+
+### 重启容器
+docker restart container_id
+
 ## 安装git
 ubuntu中 apt-get install git
+### linux下 解决git提交冲突
+需要执行下面的命令才能修复：
+
+git reset --hard HEAD    
+git clean -f -d    
+git pull
 
 ## 下载
 apt-get install/remove/update xxx 是ubuntu下的安装/卸载/更新软件方式
 yum install/remove/update xxx是redhat centos下的安装/卸载/更新方式 
+
+
+## linux常用操作
+### 创建文件
+vi filename 创建或编辑文件
+rm filename 删除文件
+### 进入vim编辑模式
+
+#### 编辑模式
+
+dd(按双下d键)   －－  删除一行
+x键     －－  删除当前字母
+
+#### 命令模式
+按esc退出到命令模式
+i 键     －－  从命令模式到编辑模式
+u 撤销到上一步
+ctrl + r 反撤销
+:q! (命令)     －－  无保存退出
+:wq (命令)  －－  保存后退出
+
+## nginx篇
+
+### nginx安装路径
+whereis nginx  查找nginx安装路径，一般的端口域名配置文件在conf.d文件夹里
+find /|grep nginx.conf    找到对应docker的nginx配置文件
+
+### 重启nginx
+nginx的sbin路径下，输入命令 ./nginx -s reload
+
+ curl localhost:28080
+
+### 命令历史记录
+history 10  最近10条历史命令记录
+history | more 所有历史记录(默认1000行)

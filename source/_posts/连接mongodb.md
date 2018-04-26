@@ -63,8 +63,45 @@ db.version() 查看mongoDB版本
 db.[数据库名].insert() 插入数据
 db.[数据库名].find() 查找数据
 ![](/images/3.png)
+
 ### linux下的安装
-待续...
+
+#### 1. 首先查你的linux版本 
+x86_64 表示你的操作系统为64位
+$ uname -a    
+
+#### 2.下载安装包
+$ curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.0.6.tgz
+
+#### 3. 解压
+$ tar -zxvf mongodb-linux-x86_64-3.0.6.tgz  
+
+#### 4. 将解压包拷贝到指定目录
+$ mv  mongodb-linux-x86_64-3.0.6/ /usr/local/mongodb  
+
+#### 5. 将可执行文件添加到path路径
+export PATH=<mongodb-install-directory>/bin:$PATH
+本文的安装路径在  /usr/local/mongodb，
+所以运行 
+$ export PATH=/usr/local/mongodb/bin:$PATH
+
+#### 6. 创建数据库目录
+mongodb的安装需手动撞见data存储目录，在此我们在根目录下创建data文件夹
+$ mkdir -p /data/db
+
+#### 7. 运行mongodb服务
+在/usr/local/mongodb/bin路径下  
+$ ./mongod
+
+运行后打印如下，表示启动mongodb成功
+2018-04-24T08:55:06.486+0000 I JOURNAL  [initandlisten] journal dir=/data/db/journal
+2018-04-24T08:55:06.487+0000 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
+2018-04-24T08:55:11.438+0000 I JOURNAL  [initandlisten] preallocateIsFaster check took 4.951 secs
+2018-04-24T08:55:11.536+0000 I JOURNAL  [durability] Durability thread started
+2018-04-24T08:55:11.536+0000 I JOURNAL  [journal writer] Journal writer thread started
+
+
+
 
 ## mongoose
 ### mongoose的核心概念

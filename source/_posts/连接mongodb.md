@@ -100,6 +100,9 @@ $ ./mongod
 2018-04-24T08:55:11.536+0000 I JOURNAL  [durability] Durability thread started
 2018-04-24T08:55:11.536+0000 I JOURNAL  [journal writer] Journal writer thread started
 
+#### 8. mongodb 容器相关
+
+
 
 
 

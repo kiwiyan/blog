@@ -44,6 +44,13 @@ docker  run -it  -p  30080:80  -p 30020-30023:20-23   --name 30.kiwilab.jd.com  
 这些外部的端口可以直接用来连接内部的数据库。
 docker  run -it  -p  32080:80  -p 32020-32023:20-23 -p 32017:27017  -p 32306:3306  --name 32.kiwilab_database   fe:1.0  /bin/bash 
 
+另外容器的时间默认和宿主机不同步，宿主机采用了CST时区即东八区，容器采用了UTC时区即标准时间，创建容器时，时间比宿主机早了8个小时。解决方案：
+
+docker  run -it  -p  32080:80  -p 32020-32023:20-23 -p 32017:27017  -p 32306:3306  --name 32.kiwilab_database -v /etc/localtime:/etc/localtime:ro  fe:1.0  /bin/bash 
+
+
+创建mongodb容器
+docker  run -it  -p  34080:80  -p 34020-34023:20-23 -p 34017:27017  --name 34.kiwilab_mongodb -v /etc/localtime:/etc/localtime:ro  mongo:3.4  /bin/bash 
 #### 2. 添加宿主机的nginx配置文件
 nginx conf.d 下创建 kiwilab.jd.com的文件（名称自定义）,添加配置内容 
 

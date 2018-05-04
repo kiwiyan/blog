@@ -107,9 +107,12 @@ docker rm container_id/container_name
 ### 查看容器
 docker ps -a  展示容器列表
 docker attach container_name   进入容器
+exit   退出容器到宿主机
 
 ### 重启容器
-docker restart container_id
+启动 docker start container_id
+重启 docker restart container_id
+
 
 ## 安装git
 ubuntu中 apt-get install git

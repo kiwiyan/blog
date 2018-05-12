@@ -1,8 +1,8 @@
 ---
 title: pwa-原谅js一生不羁放纵爱自由
 date: 2018-03-19 22:18:42
-tags: service worker
-categories: pwa
+tags: pwa
+categories: web前端
 commentes: true
 ---
 

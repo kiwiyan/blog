@@ -1,8 +1,8 @@
 ---
 title: 让个人域名支持https
 date: 2018-03-10 15:53:45
-tags: https
-categories: linux服务器
+tags: 阿里云
+categories: linux
 comments: true
 ---
 通过Github pages可以搭建免费的个人站点，默认域名为yourGithubName.github.io，在github上可以设置开启https访问模式。但是如果我们想使用自己注册的域名的话，一般就只能使用http协议打开网站了。

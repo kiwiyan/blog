@@ -1,8 +1,8 @@
 ---
 title: 阿里云ecs云服务器的使用
 date: 2018-01-14 09:48:42
-tags: 阿里云ecs
-categories: linux服务器
+tags: 阿里云
+categories: linux
 comments: true
 ---
 

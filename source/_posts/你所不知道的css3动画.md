@@ -1,8 +1,8 @@
 ---
 title: 你所不知道的css3动画
 date: 2018-02-02 06:14:24
-tags: 动画
-categories: css3
+tags: css
+categories: web前端
 comments: true
 ---
 ## css3 transition

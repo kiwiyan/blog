@@ -1,7 +1,7 @@
 ---
 title: 初识Buffer
 date: 2018-04-03 20:53:45
-tags: node核心模块
+tags: nodejs模块
 categories: nodejs
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: windows下nvm管理nodejs版本
 date: 2018-01-11 09:58:28
-tags: nvm
+tags: nodejs工具
 categories: nodejs
 comments: true
 ---

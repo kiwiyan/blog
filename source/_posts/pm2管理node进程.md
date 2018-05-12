@@ -1,7 +1,7 @@
 ---
 title: pm2管理node进程
 date: 2018-01-25 11:15:08
-tags: nodejs管理工具
+tags: nodejs工具
 categories: nodejs
 comments: true
 ---

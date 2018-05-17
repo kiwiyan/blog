@@ -172,3 +172,8 @@ server {
         proxy_set_header X-Forwarded-For $remote_addr;
     }
 }
+
+### 上传文件内存大小限制
+ Nginx出现的413 Request Entity Too Large错误,这个错误一般在上传文件的时候出现，打开nginx主配置文件nginx conf，找到http{}段，
+ 添加如下内容，表示设置最大上传内容为100m
+client_max_body_size    100m; 

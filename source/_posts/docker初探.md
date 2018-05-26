@@ -166,7 +166,7 @@ server {
     listen       80; #监听你自己服务器的80端口
     server_name  kiwilab.jd.com; #你的域名
     location / {
-        proxy_pass       http://127.0.0.1:30080; #你的容器对外端口
+        proxy_pass       http://127.0.0.1:30080; #你的容器对外端口,即应用服务器HTTP地址
         proxy_redirect   off;
         proxy_set_header Host    $host;
         proxy_set_header X-Forwarded-For $remote_addr;

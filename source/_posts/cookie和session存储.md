@@ -1,8 +1,8 @@
 ---
 title: 结合koa谈谈cookie和session存储(一)
 date: 2018-01-08 15:25:47
-tags: mongodb
-categories: 数据库
+tags: koa
+categories: nodejs
 comments: true
 ---
 

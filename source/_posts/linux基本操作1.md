@@ -12,6 +12,8 @@ comments: true
 3. 文件系统：ext3、ext4等。windows 有 fat32 、ntfs
 4. 第三方应用软件
 
+<!-- more -->
+
 ## linux目录结构
 - bin 存放二进制可执行文件(ls,cat,mkdir等)
 - boot 存放用于系统引导时使用的各种文件

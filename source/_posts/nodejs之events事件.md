@@ -7,6 +7,9 @@ comments: true
 ---
 events模块是node的核心模块，几乎所有常用的node模块都继承了events模块，比如http、fs等。
 EventEmitter是events的一个类，这个类在node的内置模块和第三方模块中大量使用，因此理解和掌握EventEmitter的用法非常重要。
+
+<!-- more -->
+
 ```js
 // events模块的EventEmitter属性指向该模块本身
 console.log(events.EventEmitter === events); 
@@ -15,7 +18,7 @@ console.log(events.EventEmitter === events);
 // true
 ```
 
-## 监听和触发
+## 事件监听和触发
 
 要使用EventEmitter，首先需要先继承它。
 使用on方法来监听，使用emit方式来触发事件。
@@ -244,7 +247,7 @@ console.log('http://localhost:5000');
 
 ```
 
-## 处理数据流 
+### 处理数据流 
 包含http，fs等nodejs模块对数据流的监听，也是基于events实现的。
 在此实现一个大型文件的拷贝方法。通过监听data，error，end事件，实现对数据流的管理。
 ```js

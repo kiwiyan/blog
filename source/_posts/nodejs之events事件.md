@@ -2,7 +2,7 @@
 title: nodejs之events事件
 date: 2018-06-11 18:42:39
 tags: nodejs模块
-categories: nodejs核心模块
+categories: nodejs
 comments: true
 ---
 events模块是node的核心模块，几乎所有常用的node模块都继承了events模块，比如http、fs等。

@@ -70,7 +70,7 @@ console.log('http://localhost:5001')
 
 当客户端发送Accept-Encoding:gzip这个request header，服务器即认为其能接受gzip压缩，就响应一个Content-Encoding:gzip，并发送压缩内容；假如客户端没有发送 Accept-Encoding，那么服务器就返回未压缩的源码。一般在实际应用中，并不是对所有文件进行压缩，通常只是压缩静态文件。 
 ```js
-// Request Headers 请求头
+// Request Headers  请求头  
 Accept-Encoding: gzip, deflate, br
 
 // Response Headers 响应头

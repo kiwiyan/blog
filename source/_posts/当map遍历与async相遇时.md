@@ -7,6 +7,7 @@ comments: true
 ---
 
 通过nodejs读取数据库，然后想遍历修改下获取的数据，很自然的想到通过async异步获取数据，然后map遍历修改数据，如下：
+<!-- more -->
 
 ## async await与promise
 ```js

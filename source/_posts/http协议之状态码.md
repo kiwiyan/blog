@@ -10,6 +10,7 @@ categories: http
 - 200 OK 请求被正常处理，返回请求资源。
 - 204 No Content 请求处理成功，但没有资源可返回。用于不需项客户端发送新资源的情况下用。
 - 206 Partial Content 客户端对资源某一部分进行请求。响应报文中包含由Content-Range制定范围的实体内容。
+<!-- more -->
 
 ## 3xx 重定向
 - 301 Moved Permanently 永久性重定向，请求资源的URI已经更改了。

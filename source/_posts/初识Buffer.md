@@ -1,5 +1,5 @@
 ---
-title: 初识Buffer
+title: nodejs之Buffer
 date: 2018-04-03 20:53:45
 tags: nodejs模块
 categories: nodejs

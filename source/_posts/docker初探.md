@@ -22,7 +22,7 @@ docker run -i -t ubuntu /bin/bash
 docker  run -it  -p  30080:80  -p 30020-30023:20-23   --name 30.kiwilab.jd.com   fe:1.0  /bin/bash 
 ```
 ## 删除镜像
-docker rmi
+docker rmi image_name
 ## docker中安装vim
 apt-get update
 apt-get install -y vim

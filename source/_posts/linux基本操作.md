@@ -1,5 +1,5 @@
 ---
-title: linux基本操作1
+title: linux基本操作
 date: 2018-05-21 10:22:17
 tags: linux
 categories: linux
@@ -115,7 +115,7 @@ vi filename 首先进入普通模式；
 
 2. 插入模式(编辑文件)
 键入 i,o或a进入编辑模式；
-按ESC键退出到普通模式；
+按esc键退出到命令模式；
 
 - enter回城换行
 - '#'号表示之后的内容为注释
@@ -124,6 +124,8 @@ vi filename 首先进入普通模式；
 3. 命令行模式
 
 文件的保存或退出：
+- u 撤销到上一步
+- ctrl + r 反撤销
 - :w 保存当前编辑文件，但并不退出
 - :w newfile 存为另外一个名为 "newfile" 的文件
 - :wq 保存后退出
@@ -143,5 +145,5 @@ vi filename 首先进入普通模式；
 post请求：curl -X POST -d '{"app":1,"event":"1-1","context":"msg"}' -H "Content-type:application/json" http://127.0.0.1:8080/msg/post
 get请求：curl http://127.0.0.1:8080/msg/get?msg=hello
 
-## 安装软件
+
 

@@ -1,6 +1,0 @@
----
-title: js基础-原型链与类
-date: 2018-04-02 10:50:48
-tags: js
-categories: web前端
----

@@ -1,6 +1,6 @@
 ---
 title: 记录git的一些常用操作
-date: 2018-12-20 19:46:00
+date: 2018-4-20 19:46:00
 tags: git
 categories: 工具
 comments: true

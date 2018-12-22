@@ -102,6 +102,10 @@ npm uninstall viewcom -g
 #### 6. 上传到npm仓库
 首先你需要有一个npm账号，没有的话官网注册很简单。接着，在项目跟路径下运行 npm login 登录npm。
 最后运行npm publish，出现 '+viewcom@1.0.0'的话表示发布成功了。
+有时npm publish时会提示失败，可能登录时的账号密码有误，也有可能是npm 使用了非官方的源。可以运行npm config ls查看registry源，如果不是官方源头，可以设置为官方源：npm config set registry https://registry.npmjs.org/
+```
+npm publish
+```
 
 #### 7. 使用
 发布成功后就可以像安装其他模块那样来使用了。

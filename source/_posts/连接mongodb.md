@@ -54,7 +54,7 @@ C:\Program Files\MongoDB\Server\3.2\bin  net stop MongoDB
 
 #### 常用命令
 
-安装路径下，运行mongo进入命令模式，C:\Program Files\MongoDB\Server\3.2\bin  mongo
+安装路径(/usr/local/mongodb/bin)下，运行mongo(./mongo)进入命令模式，C:\Program Files\MongoDB\Server\3.2\bin  mongo
 ```
 db.help() 查看命令提示
 db 查看当前所在数据库的名字 
@@ -128,7 +128,7 @@ auth=true
 #### 7. 运行mongodb服务
 在/usr/local/mongodb/bin路径下，运行命令，-f 后的路径为自己创建的mongodb配置文件(见第6步) 
 ```
-$ mongod -f /data/mongo/mongodb.cnf
+$ ./mongod -f /data/mongo/mongodb.cnf
 ```
 
 如果不创建mongodb.cnf的话，也可以用加参数的方式启动mongodb,效果和启动配置文件一样。但推荐配置文件的方式，修改和启动都方便。

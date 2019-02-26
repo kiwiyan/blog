@@ -12,7 +12,7 @@ yum install docker -y
 ```
 <!-- more -->
 ## 启动
-```
+``` 
 sercive docker start
 ```
 
@@ -131,33 +131,3 @@ yum install/remove/update xxx是redhat centos下的安装/卸载/更新方式
 
 
 
-## nginx篇
-
-### nginx安装路径
-whereis nginx  查找nginx安装路径，一般的端口域名配置文件在conf.d文件夹里
-find /|grep nginx.conf    找到对应docker的nginx配置文件
-
-### 重启nginx
-nginx的sbin路径下，输入命令 ./nginx -s reload
-
- curl localhost:28080
-
-### 命令历史记录
-history 10  最近10条历史命令记录
-history | more 所有历史记录(默认1000行)
-
-server {
-    listen       80; #监听你自己服务器的80端口
-    server_name  kiwilab.jd.com; #你的域名
-    location / {
-        proxy_pass       http://127.0.0.1:30080; #你的容器对外端口,即应用服务器HTTP地址
-        proxy_redirect   off;
-        proxy_set_header Host    $host;
-        proxy_set_header X-Forwarded-For $remote_addr;
-    }
-}
-
-### 上传文件内存大小限制
- Nginx出现的413 Request Entity Too Large错误,这个错误一般在上传文件的时候出现，打开nginx主配置文件nginx conf，找到http{}段，
- 添加如下内容，表示设置最大上传内容为100m
-client_max_body_size  100m; 

@@ -49,3 +49,27 @@ pm2 start app.js --node-args="--max-old-space-size=1024"
 
 ```
 
+## pm2配置文件
+命令行配置比较多时，可以使用pm2的配置文件来启动。比如设置环境变量，实时监听等都很方便，也一目了然。
+如下配置比如起名 start.json，
+运行 pm2 start start.json 则会设置默认的环境变量 NODE_ENV 为production，
+运行 pm2 start start.json --env test 则设置NODE_ENV 为test。
+```js
+{
+    "apps": [
+        {
+            "name": "t-server",
+            "script": "src/app.js",
+            "watch": true,
+            "env": {
+                "NODE_ENV": "production"
+            },
+            "env_test" : {
+                "NODE_ENV": "test"
+            }
+            
+        }
+    ]
+}
+```
+

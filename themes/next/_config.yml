@@ -17,7 +17,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -126,10 +126,10 @@ scheme: Pisces
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
+  tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  schedule: /schedule/ || calendar
+  # schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -301,7 +301,7 @@ related_posts:
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
-  enable: true
+  enable: false 
   url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
@@ -494,7 +494,7 @@ yandex_site_verification:
 baidu_site_verification:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 
 # ---------------------------------------------------------------
